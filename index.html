@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Book it! - Discover great places for you</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="title"> Book it!</h1>
+        <div class="filter__container">
+            <div class="filter__grid">
+                <select class="filter__countries filter__icon" name="filter_countries" id="filter_countries">
+                    <option value="all">All countries</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Uruguay">Uruguay</option>
+                </select>
+                <input class="filter__DateFrom filter__icon" name="date-from" id="date-from" type="date">
+                <input class="filter__DateTo filter__icon" name="date-to" id="date-to" type="date">
+                <select class="filter__prices filter__icon" name="filter-prices" id="filter-prices">
+                    <option value="all">All prices</option>
+                    <option value="price1">$200.000</option>
+                    <option value="price2">$300.000</option>
+                    <option value="price3">$400.000</option>
+                    <option value="price4">$500.000</option>
+                </select>
+                <select class="filter__Sizes filter__icon" name="filter_sizes" id="filter-sizes">
+                    <option value="all">All Sizes</option>
+                    <option value="size1">Small</option>
+                    <option value="size2">Medium</option>
+                    <option value="size3">Large</option>
+                </select>
+                <button class="filter__Clean" id="filter_clean_btn">Clear</button>
+            </div>
+        </div>
+        <div class="FoundMessage_container">
+            <p class="FoundMessage__Title"> We have found for you...</p>
+            <p class="FoundMessage__Content">All sizes hotels of all category prices, in all countries.</p>
+        </div>
+    </header>
+    <main></main>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
