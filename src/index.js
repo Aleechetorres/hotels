@@ -12,6 +12,19 @@ hotelsContainer.className = "hotelsContainer";
 
 let data = [];
 
+function getFlagImagePath(country) {
+    // Aquí puedes definir un objeto que mapee países a rutas de imágenes de banderas
+    const flagImages = {
+        Argentina: "img/arg-flag.jpg",
+        Brasil: "img/bra-flag.jpg",
+        Chile: "img/chile-flag.jpg",
+        Uruguay: "img/uru-flag.jpg"
+        // Agrega más países y rutas de imágenes aquí
+    };
+
+    return flagImages[country] || ""; // Devuelve la ruta de la imagen o una cadena vacía si no se encuentra
+}
+
 // Función para limpiar y renderizar las cards de hoteles
 function renderFilteredHotels(filteredHotels) {
     hotelsContainer.innerHTML = '';
@@ -27,21 +40,35 @@ function renderFilteredHotels(filteredHotels) {
         cardHotel.appendChild(imageHotel);
     
         const hotelName = document.createElement("h2");
-        hotelName.className = "hotel-name";
+        hotelName.className = "hotel__name";
         hotelName.textContent = hotel.name;
         cardHotel.appendChild(hotelName);
     
         const hotelCountry = document.createElement("p");
+        hotelCountry.className = "hotel__country";
         hotelCountry.textContent = hotel.country;
         cardHotel.appendChild(hotelCountry);
+
+        const flagImg = document.createElement("img");
+        flagImg.className = "flag-image";
+        flagImg.setAttribute("src", getFlagImagePath(hotel.country));
+        flagImg.setAttribute("alt", `${hotel.country} Flag`);
+        hotelCountry.appendChild(flagImg);
     
         const hotelPrice = document.createElement("p");
-        hotelPrice.textContent = "Price" + hotel.price;
+        hotelPrice.className = "hotel__price";
+        hotelPrice.textContent = "Price " + hotel.price;
         cardHotel.appendChild(hotelPrice);
     
         const hotelRooms = document.createElement("p");
-        hotelRooms.textContent = "Rooms" + hotel.rooms;
+        hotelRooms.className = "hotel__rooms";
+        hotelRooms.textContent = "Rooms " + hotel.rooms;
         cardHotel.appendChild(hotelRooms);
+
+        const hotelDescription = document.createElement("p");
+        hotelDescription.className = "hotel__description";
+        hotelDescription.textContent = hotel.description;
+        cardHotel.appendChild(hotelDescription);
     
         hotelsContainer.appendChild(cardHotel);
     });
