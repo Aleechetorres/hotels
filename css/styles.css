@@ -9,7 +9,7 @@
 .header {
     display: flex;
     flex-direction: column;
-    background-image: radial-gradient(224.24% 668.5% at 14.41% -14.14%, rgba(0,0,0,0.57) 44.5%, rgba(255,255,255,0) 67.11%),url("/img/hotel.jpg");
+    background-image: radial-gradient(224.24% 668.5% at 14.41% -14.14%, rgba(0,0,0,0.57) 44.5%, rgba(255,255,255,0) 67.11%),url("../img/hotel.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
     min-height: 80vh; 
@@ -60,20 +60,20 @@
 }
 
 .filter__countries {
-    background-image: url("/img/alfiler.png");
+    background-image: url("../img/alfiler.png");
 }
 
 .filter__DateFrom {
-    background-image: url("/img/inicio.png");
+    background-image: url("../img/inicio.png");
 }
 .filter__DateTo {
-    background-image: url("./img/inicio.png");
+    background-image: url("../img/inicio.png");
 }
 .filter__prices{
     background-image: url("../img/dolar.png");
 }
 .filter__Sizes{
-    background-image: url("/img/cama-del-hotel.png");
+    background-image: url("../img/cama-del-hotel.png");
 }
 
 .filter__icon {
